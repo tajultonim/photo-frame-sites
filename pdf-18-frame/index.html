@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      PDF 18th Anniversary Photo Frame — Add the Emblem to Your Photo
+    </title>
+    <meta
+      name="description"
+      content="Upload your photo and instantly add the Physically-challanged Development Foundation(PDF) 18th Anniversary emblem overlay. Free, works in your browser, no upload to any server."
+    />
+    <meta
+      name="keywords"
+      content="Physically-challanged Development Foundation, PDF 18th anniversary, photo frame, profile picture frame, DP frame"
+    />
+    <meta name="author" content="Tajultonim" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pdf-18-frame.pages.dev/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PDF 18th Anniversary Photo Frame" />
+    <meta
+      property="og:description"
+      content="Add the Physically-challanged Development Foundation 18th Anniversary emblem to your photo in seconds — free and works right in your browser."
+    />
+    <meta
+      property="og:image"
+      content="https://pdf-18--frame.pages.dev/preview.png"
+    />
+    <meta property="og:image:width" content="526" />
+    <meta property="og:image:height" content="526" />
+    <meta property="og:url" content="https://pdf-18-frame.pages.dev/" />
+    <meta property="og:locale" content="bn_BD" />
+    <meta property="og:site_name" content="PDF 18th Anniversary Photo Frame" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PDF 18th Anniversary Photo Frame" />
+    <meta
+      name="twitter:description"
+      content="Add the Physically-challanged Development Foundation 18th Anniversary emblem to your photo in seconds — free and works right in your browser."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pdf-18-frame.pages.dev/preview.png"
+    />
+
+    <link rel="preload" href="frame.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="eyebrow">Physically-challanged Development Foundation <br> 18th Anniversary</div>
+        <h1>Frame your photo for the celebration</h1>
+        <p class="sub">
+          Upload a photo, drag and zoom to position it, then download it with
+          the anniversary emblem overlaid.
+        </p>
+        <div class="gold-rule"></div>
+      </header>
+
+      <div class="stage">
+        <div class="drop" id="dropZone">
+          <canvas
+            id="canvas"
+            width="1400"
+            height="1400"
+            style="display: none"
+          ></canvas>
+          <div class="placeholder" id="placeholder">
+            <div class="icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5-4 4-2-2-5 5" />
+              </svg>
+            </div>
+            <p>Click or drop a photo</p>
+            <span>Any size — you can reposition it after</span>
+          </div>
+          <button class="change-btn" id="changeBtn">Change photo</button>
+          <div class="hint-pill">Drag to reposition</div>
+          <div class="frame-loader" id="frameLoader">
+            <div class="spinner"></div>
+            <span>Preparing frame…</span>
+          </div>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" />
+
+        <div class="zoom-row" id="zoomRow">
+          <label for="zoomSlider">Zoom</label>
+          <input
+            type="range"
+            id="zoomSlider"
+            min="1"
+            max="3"
+            step="0.01"
+            value="1"
+          />
+        </div>
+
+        <div class="actions">
+          <button class="action-btn btn-secondary" id="resetBtn" disabled>
+            Remove photo
+          </button>
+          <button class="action-btn btn-primary" id="downloadBtn" disabled>
+            Download framed photo
+          </button>
+        </div>
+        <p class="note">
+          Your photo is processed entirely in your browser — nothing is uploaded
+          anywhere.
+        </p>
+      </div>
+
+      <div class="howto">
+        <h2>How to use</h2>
+        <ol>
+          <li>
+            <strong>Add a photo</strong> — click the frame or drag a photo file
+            into it.
+          </li>
+          <li>
+            <strong>Position it</strong> — click and drag the photo to move it,
+            and use the zoom slider (or scroll) to resize it.
+          </li>
+          <li>
+            <strong>Change your mind?</strong> — use "Change photo" to swap it,
+            or "Remove photo" to start over.
+          </li>
+          <li>
+            <strong>Download</strong> — click "Download framed photo" to save
+            the final image to your device.
+          </li>
+        </ol>
+      </div>
+
+      <footer>
+        PHYSICALLY-CHALLANGED DEVELOPMENT FOUNDATION &nbsp;·&nbsp; ১৮ তম প্রতিষ্ঠা বার্ষিকী<br />
+        Frame design by
+        <a
+          href="https://www.facebook.com/dyandidar/"
+          target="_blank"
+          rel="noopener"
+          >দাইয়ান আহমেদ দিদার</a
+        ><br />
+
+        <p style="margin-top: 10px">
+          Made with 🩵 by
+          <a
+            href="https://www.facebook.com/tajultonim"
+            target="_blank"
+            rel="noopener"
+            >TajulTonim</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
